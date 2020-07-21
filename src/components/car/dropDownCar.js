@@ -139,7 +139,7 @@ const LabelFilter = styled.p`
 			font-size: 18px !important;
 			line-height: 1.6em !important;
 			font-weight: 300 !important;
-			color: #ff6600 !important;
+			color: #FB6747 !important;
 			user-select: none !important;
 			padding: 5px 15px 5px 15px !important;
 `
@@ -207,7 +207,7 @@ const ButtonDivC = styled.div`
 	display: flex !important;
 	flex-direction: column !important;
 	span {
-		background: #ff6600 !important;
+		background: #FB6747 !important;
 		height: 3px !important;
 		width: ${props => props.stateOfButton ? '100% !important' : '0 !important'};
 	}

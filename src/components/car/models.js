@@ -61,7 +61,7 @@ const LabelFilter = styled.p`
 	font-size: 18px !important;
     line-height: 1.6em !important;
     font-weight: 300 !important;
-    color: #ff6600 !important;
+    color: #FB6747 !important;
     user-select: none !important;
     padding: 5px 15px 5px 15px !important;
 `
@@ -98,7 +98,7 @@ const ModelCarList = styled.div`
     h4 {
         line-height: 1.6em !important;
         font-weight: 300 !important;
-    	color: #ff6600 !important;
+    	color: #FB6747 !important;
     	padding-left: 15px !important;
      	font-size: 18px !important;
      	padding-bottom: 10px !important;

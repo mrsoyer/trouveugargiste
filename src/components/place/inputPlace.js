@@ -47,7 +47,7 @@ const Label = styled.label`
     justify-content: center;
     align-items: center;
     background-color: #F0F0F0;
-    color: rgb(255, 102, 0);
+    color: #FB6747;
     min-width: 50px;
     width: 50px;
     border: 1px solid #F0F0F0;

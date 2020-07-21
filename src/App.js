@@ -153,7 +153,7 @@ function App() {
 						/>
 						<Spacer/>
 						<InputSubmit form="form" type="submit">
-							Voir les tarifs
+							Trouve un garagiste
 						</InputSubmit>
 					</Form>
 				</FilterContainer>
@@ -206,7 +206,7 @@ const InputSubmit = styled.button`
     font-weight: 400 !important;
     user-select: none !important;
     outline: none !important;
-    background-color: #FF7517 !important;
+    background-color: #66bb6a !important;
     height: 50px !important;
     line-height: 50px !important;
     border-width: 0 !important;

@@ -85,7 +85,7 @@ const Label = styled.label`
     justify-content: center !important;
     align-items: center !important;
     background-color: #F0F0F0 !important;
-    color: rgb(255, 102, 0) !important;
+    color: #FB6747 !important;
     min-width: 50px !important;
     width: 50px !important;
     border: 1px solid #F0F0F0 !important;
@@ -99,7 +99,7 @@ const Input = styled.input`
 	background: #fff !important;
     padding: 0 30px 0 15px !important;
     border: 1px solid #F0F0F0 !important;
-    height: calc(100% - 2px) !important;
+    height: auto;
     z-index: 3 !important;
     outline: none !important;
     width: 100% !important;
