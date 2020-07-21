@@ -60,7 +60,7 @@ const Input = styled.input`
 	background: #fff;
     padding: 0 30px 0 15px;
     border: 1px solid #F0F0F0;
-    height: calc(100% - 2px);
+    height: auto;
     outline: none;
     width: 100%;
     font-size: 14px;

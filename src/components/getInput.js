@@ -99,7 +99,7 @@ const Input = styled.input`
 	background: #fff !important;
     padding: 0 30px 0 15px !important;
     border: 1px solid #F0F0F0 !important;
-    height: auto;
+    height: auto !important;
     z-index: 3 !important;
     outline: none !important;
     width: 100% !important;
