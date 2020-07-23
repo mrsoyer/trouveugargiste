@@ -61,13 +61,16 @@ const Input = styled.input`
     padding: 0 30px 0 15px;
     border: 1px solid #F0F0F0;
     height: auto;
+    border-radius: 0;
     outline: none;
     width: 100%;
     font-size: 14px;
     font-weight: 400;
+    -webkit-appearance: none;
     ::placeholder
 	{
     font-style: italic;
+    color: #a9a9a9;
 	}
 `
 

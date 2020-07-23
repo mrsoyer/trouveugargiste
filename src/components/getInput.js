@@ -43,20 +43,46 @@ function GetInputContainer({
 			<Label>
 				{Icon && <Icon isOpen={isOpen}/>}
 			</Label>
-			<Input
-				type="text"
-				id={id}
-				autoComplete="off"
-				open={isOpen}
-				onClick={toggle2}
-				onChange={(e) => {
-					if (placeHolder === 'Véhicule' && e.target.value.length <= 8) {
-						setRegistration(e.target.value)
-					} else return
-				}}
-				placeholder={placeHolder}
-				value={value}>
-			</Input>
+			{
+				placeHolder !== 'Véhicule' &&
+				<InputDiv
+					type="text"
+					id={id}
+					autoComplete="off"
+					open={isOpen}
+					value={value}
+					onClick={toggle2}
+					onChange={(e) => {
+						if (placeHolder === 'Véhicule' && e.target.value.length <= 8) {
+							setRegistration(e.target.value)
+						} else return
+					}}
+					placeholder={placeHolder}
+					>
+
+
+
+					{!value ? placeHolder : value}
+				</InputDiv>
+
+			}
+			{
+				placeHolder === 'Véhicule' &&
+				<Input
+					type="text"
+					id={id}
+					autoComplete="off"
+					open={isOpen}
+					onClick={toggle2}
+					onChange={(e) => {
+						if (placeHolder === 'Véhicule' && e.target.value.length <= 8) {
+							setRegistration(e.target.value)
+						} else return
+					}}
+					placeholder={placeHolder}
+					value={value}>
+				</Input>
+			}
 			{value && <RemoveButton onClick={remove}><Cross/></RemoveButton>}
 			{isOpen && children && children}
 		</InputContainer>
@@ -74,8 +100,8 @@ const InputContainer = styled.div`
     @media ${device.custom} {
 		padding-right: 0 !important;
 		margin-bottom: 10px !important;
-		z-index: ${({isOpen}) => isOpen ? '50 !important' : 'inherit !important'};;
-		position: ${({isOpen}) => isOpen ? 'fixed !important' : 'relative !important'};;
+		z-index: ${({isOpen}) => isOpen ? '50 !important' : 'inherit !important'};
+		position: ${({isOpen}) => isOpen ? 'fixed !important' : 'relative !important'};
 		top: ${({isOpen}) => isOpen ? '50px !important' : 'inherit !important'};
 	}
 `
@@ -98,6 +124,7 @@ const Label = styled.label`
 const Input = styled.input`
 	background: #fff !important;
     padding: 0 30px 0 15px !important;
+    border-radius: 0;
     border: 1px solid #F0F0F0 !important;
     height: auto !important;
     z-index: 3 !important;
@@ -105,10 +132,28 @@ const Input = styled.input`
     width: 100% !important;
     font-size: 14px !important;
     font-weight: 400 !important;
+    -webkit-appearance: none;
     ::placeholder
 	{
+	color: #a9a9a9;
     font-style: italic !important;
 	}
+`
+const InputDiv = styled.div`
+	background: #fff !important;
+    padding: 0 30px 0 15px !important;
+    border-radius: 0;
+    border: 1px solid #F0F0F0 !important;
+    height: auto !important;
+    z-index: 3 !important;
+    outline: none !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-style: ${({value}) => value ? '' : ' italic !important;'};
+    color: ${({value}) => value ? '#000' : '#a9a9a9'};
+    display: flex;
+    align-items: center;
 `
 
 const RemoveButton = styled.div`
